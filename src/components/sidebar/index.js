@@ -8,10 +8,11 @@ class Sidebar extends React.Component {
     cloneObj = obj => {
         if (Object(obj) !== obj) return obj;
         else if (Array.isArray(obj)) return obj.map(this.cloneObj);
-    
-        return Object.fromEntries(
-            Object.entries(obj).map(([k, v]) => [k, this.cloneObj(v)])
-        );
+        let tempArr = {}
+        Object.entries(obj).map(([k, v]) => [k, this.cloneObj(v)]).forEach(([k,v])=>{
+            tempArr[k] = v;
+        })
+        return tempArr;
     };
     
     convertObject2Tree = _list => {
