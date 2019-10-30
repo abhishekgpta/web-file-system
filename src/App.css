@@ -1,0 +1,163 @@
+/* .App {
+  text-align: center;
+} */
+
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+}
+.folder_container:hover{
+  background: #E6F5FF;
+  border-radius: 8px;
+}
+.file-system__container{
+  cursor: pointer;
+}
+.App-link {
+  color: #09d3ac;
+}
+/*-----------------Slider Style start-----------------*/
+.main_Link{
+  color:#AFB2B6;
+}
+.main_Link:hover{
+  color:#AFB2B6;
+  text-decoration: none;
+}
+.sidebar-wrapper{
+  background: #f9fafc;
+  width: 260px;
+  height: 100%;
+  max-height: 100%;
+  position: fixed;
+  top: 0;
+  /* left: -300px; */
+  z-index: 999;
+}
+.sideBar-selected {
+  background-color:#EEEFF1;
+}
+.sidebar-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-content{
+    max-height: calc(100% - 30px);
+    height: calc(100% - 30px);
+    overflow-y: auto;
+    position: relative;
+}
+
+/*-----------------Slider Style end-----------------*/
+.main_content{
+  margin-left: 260px;
+}
+/*----------------React context menu css start----------*/
+.react-contextmenu {
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  color: #373a3c;
+  font-size: 16px;
+  margin: 2px 0 0;
+  min-width: 160px;
+  outline: none;
+  opacity: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  text-align: left;
+  transition: opacity 250ms ease !important;
+}
+
+.react-contextmenu.react-contextmenu--visible {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+.react-contextmenu-item {
+  background: 0 0;
+  border: 0;
+  color: #373a3c;
+cursor: pointer;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 3px 20px;
+  text-align: inherit;
+  white-space: nowrap;
+}
+
+.react-contextmenu-item.react-contextmenu-item--active,
+.react-contextmenu-item.react-contextmenu-item--selected {
+  color: #fff;
+  background-color: #20a0ff;
+  border-color: #20a0ff;
+  text-decoration: none;
+}
+
+.react-contextmenu-item.react-contextmenu-item--disabled,
+.react-contextmenu-item.react-contextmenu-item--disabled:hover {
+  background-color: transparent;
+  border-color: rgba(0,0,0,.15);
+  color: #878a8c;
+}
+
+.react-contextmenu-item--divider {
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  cursor: inherit;
+  margin-bottom: 3px;
+  padding: 2px 0;
+}
+.react-contextmenu-item--divider:hover {
+  background-color: transparent;
+  border-color: rgba(0,0,0,.15);
+}
+
+.react-contextmenu-item.react-contextmenu-submenu {
+padding: 0;
+}
+
+.react-contextmenu-item.react-contextmenu-submenu > .react-contextmenu-item {
+}
+
+.react-contextmenu-item.react-contextmenu-submenu > .react-contextmenu-item:after {
+  content: "▶";
+  display: inline-block;
+  position: absolute;
+  right: 7px;
+}
+
+.example-multiple-targets::after {
+  content: attr(data-count);
+  display: block;
+}
+/*----------------React context menu css end----------*/
+
+/*----------------React Modal css start--------------*/
+.file-system__modal{
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width:300px;
+  margin-left: 300px;
+  right: 40px;
+  background: #FFFFFF;
+  border: 1px solid rgba(221,224,228,0.70);
+  box-shadow: 0 16px 64px 0 rgba(0,0,0,0.08);
+  border-radius: 8px;
+}
+/*----------------React Modal css end--------------*/
+/*--------------React Modal Content start-------------*/
+.create-new___modal .create-new-form___modal .create-new-form-type___modal button{
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  line-height: 1.5;
+}
+/*--------------React Modal Content end-------------*/
