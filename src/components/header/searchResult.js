@@ -5,6 +5,7 @@ import folder_logo from '../../assets/folder_shape.png';
 function FSSearch({ searchQuery, filteredRecords, handleNavigation, globalSearch, handleInputChange }) {
     return (
         searchQuery ? <div className="search_result__fileSystem position-absolute bg-dark text-white w-100"
+        style={{maxHeight:"90vh",overflowY:"auto"}}
         >
             <div className="p-2">
                 <input name="globalSearch" type="checkbox" id="globalCheck"
