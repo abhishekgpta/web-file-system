@@ -13,8 +13,13 @@
   background: #E6F5FF;
   border-radius: 8px;
 }
-.file-system__container{
-  cursor: pointer;
+.folder_container:hover{
+  background: #E6F5FF;
+  border-radius: 8px;
+}
+.file__container:hover{
+  background: #E6F5FF;
+  border-radius: 8px;
 }
 .App-link {
   color: #09d3ac;
@@ -161,3 +166,24 @@ padding: 0;
   line-height: 1.5;
 }
 /*--------------React Modal Content end-------------*/
+
+/*-------------------Search Drop down start-----------*/
+
+.search_result__fileSystem {
+  top:100%;
+  left:0px;
+  right:0px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 5px;
+  z-index: 999;
+}
+.search_result__fileSystem div{
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+
+}
+.search_result__fileSystem div:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/*-------------------Search Drop down end-----------*/

@@ -45,14 +45,14 @@ class Index extends React.Component {
             showInfoWindow: false
         })
     }
-
+   
     render() {
         const dirChildren = this.showPathEntries(this.props.match.url, this.props.data.fileSystem);
         return <div>
             <Sidebar {...this.props} />
             <main className="main_content">
                 <div className="container-fluid mt-3 file-system__container">
-                    <DirHeader {...this.props} />
+                    <DirHeader {...this.props} dirChildren={dirChildren} />
                     <div className="row align-items-end mt-5">
                         <DirContent dirChildren={dirChildren} handleDoubleClick={this.handleDoubleClick} handleContextMenu={this.handleContextMenu} />
                         <div className="col-md-1 text-center"><Add {...this.props} /></div>

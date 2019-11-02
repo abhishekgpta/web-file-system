@@ -15,30 +15,28 @@ export default (state = initialState, action) => {
         return state;
     }
   };
-
   export const addData = (data, newData) => {
     let oldEntryCount = 0;
+    let fileName = newData.name;
+    
     data[newData.parentID].children.forEach(elementId => {
         if (
-            data[elementId].name.includes(newData.name) &&
+            data[elementId].name.includes(fileName) &&
             data[elementId].type === newData.type
         ) {
             oldEntryCount++;
+            let fileNameArr = newData.name.split(".");
+            if(fileNameArr.length >= 2){
+                fileNameArr[fileNameArr.length - 2] = `${fileNameArr[fileNameArr.length - 2]}(${oldEntryCount})`;
+            }
+            else{
+                fileNameArr[fileNameArr.length - 1] = `${fileNameArr[fileNameArr.length - 1]}(${oldEntryCount})`;
+            }
+            fileName = fileNameArr.join(".");
         }
     });
-    if (oldEntryCount > 0) {
-        if (newData.type === "FILE") {
-            let temp = newData.name.split('.');
-            if (temp.length > 1) {
-                temp[temp.length - 2] = `${temp[temp.length - 2]}(${oldEntryCount})`;
-                newData.name = temp.join('.');
-            } else {
-                newData.name = `${newData.name}(${oldEntryCount})`;
-            }
-        } else {
-            newData.name = `${newData.name}(${oldEntryCount})`;
-        }
-    }
+    newData.name = fileName;
+    
     newData.path =
         newData.parentPath === '/'
             ? `${newData.parentPath}${newData.name}`

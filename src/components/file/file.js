@@ -4,7 +4,7 @@ class File extends React.Component {
     render() {
         const { name = "" } = this.props;
         const fileExt = name.split(".")[1];
-        return <div className="d-flex justify-content-center pt-3">
+        return <div className="d-flex justify-content-center pt-3 file__container">
             <figure className="position-relative">
                 <img src={file_logo} className="App-logo" alt="file_logo" />
                 <div className="position-absolute text-white" style={{

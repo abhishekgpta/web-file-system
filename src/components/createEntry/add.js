@@ -22,7 +22,7 @@ class AddFileFolder extends React.Component {
     render() {
         return <div className="d-flex justify-content-center pt-3">
             <figure onClick={this.handleAdd}>
-                <img src={add_logo} className="App-logo" alt="add_logo" />
+                <img src={add_logo} className="App-logo w-100" alt="add_logo" />
             </figure>
             <ReactModal
                 isOpen={this.state.showModal}
